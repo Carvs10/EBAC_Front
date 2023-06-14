@@ -1,0 +1,51 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #e6e6e6;
+}
+
+header {
+  text-align: center;
+  padding: 16px;
+  width: 100%;
+  margin: 24px 0;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  padding: 8px;
+}
+
+form input,
+button {
+  padding: 8px;
+  font-size: 18px;
+}
+
+input {
+  margin-right: 8px;
+}
+
+button {
+  font-weight: bold;
+}
+
+ul {
+  text-align: center;
+  margin-top: 16px;
+  font-size: 20px;
+}
+
+ul li {
+  list-style: disc;
+  padding: 8px;
+  cursor: pointer;
+}
+.done {
+  text-decoration: line-through;
+}
