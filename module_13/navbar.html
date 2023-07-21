@@ -5,10 +5,72 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="lib/bootstrap.min.css" />
+    <style>
+      .navbar-nav .nav-link.active {
+        color: #fff;
+      }
+      .nav-link {
+        text-align: center;
+      }
+      section {
+        height: 100vh;
+        background-color: #eee;
+        padding-top: 70px;
+      }
+
+      header {
+        position: sticky;
+        top: 0;
+        left: 0;
+        background-color: #fff;
+      }
+    </style>
   </head>
   <body>
-    <div class="container">
-      <div class="navbar"></div>
+    <header id="header">
+      <div class="navbar navbar-expand-lg">
+        <div class="container">
+          <h1>Titulo do site</h1>
+          <button
+            type="button"
+            class="navbar-toggler"
+            data-bs-toggle="collapse"
+            data-bs-target="#menu"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <nav class="collapse navbar-collapse justify-content-end" id="menu">
+            <ul class="nav navbar-nav nav-pills">
+              <li class="nav-item">
+                <a href="#inicio" class="nav-link active">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a href="#produtos" class="nav-link">Produtos</a>
+              </li>
+              <li class="nav-item">
+                <a href="#promocoes" class="nav-link">Promoçoes</a>
+              </li>
+              <li class="nav-item">
+                <a href="#contato" class="nav-link">Contato</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <div data-bs-spy="scroll" data-bs-target="#header">
+      <section id="inicio">
+        <h2>Inicio</h2>
+      </section>
+      <section id="produtos">
+        <h2>Produtos</h2>
+      </section>
+      <section id="promocoes">
+        <h2>Promoçoes</h2>
+      </section>
+      <section id="contato">
+        <h2>Contato</h2>
+      </section>
     </div>
 
     <script src="lib/bootstrap.bundle.min.js"></script>
