@@ -14,7 +14,7 @@
       }
       section {
         height: 100vh;
-        background-color: #eee;
+        background-color: #fff;
         padding-top: 70px;
       }
 
@@ -55,6 +55,9 @@
               </li>
             </ul>
           </nav>
+          <button type="button" class="btn btn-warning" id="btn-check-mail">
+            Checar caixa de entrada
+          </button>
         </div>
       </div>
     </header>
@@ -64,6 +67,41 @@
       </section>
       <section id="produtos">
         <h2>Produtos</h2>
+        <div class="container">
+          <nav class="nav nav-pills">
+            <button
+              type="button"
+              data-bs-toggle="tab"
+              data-bs-target="#aba1"
+              class="nav-link active"
+            >
+              Eletronicos
+            </button>
+            <button
+              type="button"
+              data-bs-toggle="tab"
+              data-bs-target="#aba2"
+              class="nav-link"
+            >
+              Moda Masculina
+            </button>
+            <button
+              type="button"
+              data-bs-toggle="tab"
+              data-bs-target="#aba3"
+              class="nav-link"
+            >
+              Moda Feminina
+            </button>
+          </nav>
+          <div class="tab-content">
+            <div class="tab-pane active" id="aba1">
+              Conteudo da aba Eletronicos
+            </div>
+            <div class="tab-pane" id="aba2">Conteudo da aba Moda Masculina</div>
+            <div class="tab-pane" id="aba3">Conteudo da aba Moda Feminina</div>
+          </div>
+        </div>
       </section>
       <section id="promocoes">
         <h2>Promoçoes</h2>
@@ -73,6 +111,36 @@
       </section>
     </div>
 
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+      <div class="toast" id="mensagem">
+        <header class="toast-header">
+          <strong>Importante</strong>
+        </header>
+        <div class="toast-body">
+          Você possui 10 mensagens não lidas
+          <div class="mt-2 pt-2 border-top">
+            <button
+              data-bs-dismiss="toast"
+              type="button"
+              class="btn btn-danger"
+            >
+              Descartar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <script src="lib/bootstrap.bundle.min.js"></script>
+    <script>
+      const toastActivator = document.getElementById("btn-check-mail");
+      const mensagem = document.getElementById("mensagem");
+      if (toastActivator) {
+        toastActivator.addEventListener("click", () => {
+          const toast = new bootstrap.Toast(mensagem);
+          toast.show();
+        });
+      }
+    </script>
   </body>
 </html>
