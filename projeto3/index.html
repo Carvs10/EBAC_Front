@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Restaurante</title>
+    <link rel="stylesheet" href="lib/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:ital,wght@0,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <!--Header section  -->
+    <header class="navbar navbar-expand-lg sticky-top p-4" id="cabecalho">
+      <div class="container">
+        <h1 class="navbar-brand m-0 section-title">Nome do restaurante</h1>
+        <button
+          class="navbar-toggler"
+          data-bs-toggle="collapse"
+          data-bs-target="#nav-menu"
+        >
+          <span class="navbar-toggler-icon"> </span>
+        </button>
+        <nav class="navbar-collapse collapse justify-content-end" id="nav-menu">
+          <ul class="nav nav-pills d-block d-md-flex">
+            <li class="nav-item fw-bold">
+              <a class="nav-link" href="#sobre-o-restaurante">
+                <i class="bi bi-house-door me-1"></i>
+                Sobre o restaurante</a
+              >
+            </li>
+            <li class="nav-item fw-bold">
+              <a class="nav-link" href="#eventos">
+                <i class="bi bi-calendar me-1"></i>Eventos</a
+              >
+            </li>
+            <li class="nav-item fw-bold">
+              <a class="nav-link" href="#">
+                <i class="bi bi-card-text me-1"></i>Nosso cardápio</a
+              >
+            </li>
+            <li class="nav-item fw-bold">
+              <a class="nav-link" href="#">
+                <i class="bi bi-chat-left-text me-1"></i>
+                Fale conosco</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <!-- Carrousel sections -->
+    <div data-bs-spy="scroll" data-bs-target="cabecalho">
+      <section id="sobre-o-restaurante">
+        <div class="carousel slide" data-bs-ride="carousel" id="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="3000">
+              <img src="images/slides/slide1.png" alt="restaurante" />
+            </div>
+            <div class="carousel-item" data-bs-interval="3000">
+              <img src="images/slides/slide2.png" alt="taças de vinho" />
+            </div>
+            <div class="carousel-item" data-bs-interval="3000">
+              <img src="images/slides/slide3.png" alt="mesa com comida" />
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carousel"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon"></span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carousel"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon"></span>
+          </button>
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              class="active"
+              data-bs-target="#carousel"
+              data-bs-slide-to="0"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carousel"
+              data-bs-slide-to="1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carousel"
+              data-bs-slide-to="2"
+            ></button>
+          </div>
+        </div>
+        <div class="pt-5 pb-5">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-5">
+                <img
+                  src="images/restaurante.jpg"
+                  alt="Foto do espaço interno"
+                  class="d-block w-100 rounded"
+                />
+              </div>
+              <div class="col-md-7">
+                <h2 class="section-title">
+                  Sobre o <span class="text-coloreds">restaurante </span>
+                </h2>
+                <p>
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic
+                  vitae, delectus, numquam vel debitis sed porro ipsam quisquam
+                  assumenda cumque culpa. Blanditiis repudiandae architecto
+                  molestiae velit dolorem enim beatae harum.
+                </p>
+                <h3 class="section-title">
+                  Sobre o <span class="text-coloreds"> espaço </span>
+                </h3>
+                <p>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Dolores aliquam placeat aspernatur non iure labore expedita
+                  delectus vel aut. Dolore quia eum quaerat, nemo amet possimus
+                  neque facere dolorem? Omnis?
+                </p>
+                <ul>
+                  <li>Item 1</li>
+                  <li>Item 2</li>
+                  <li>Item 3</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="eventos" class="pt-5 pb-5">
+        <div class="container">
+          <div class="row">
+            <h2 class="section-title text-center">
+              Para todas as <span class="text-coloreds"> ocasioes </span>
+            </h2>
+          </div>
+          <div class="row mt-4">
+            <div class="col-md-4">
+              <img
+                class="d-block w-100 rounded mb-2"
+                src="images/eventos/aniversario.jpg"
+                alt=""
+              />
+              <h3 class="section-title text-coloreds fs-4">
+                <i class="bi bi-calendar-heart-fill"></i>
+                Aniversarios
+              </h3>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi,
+                minima repellendus! Sunt vero harum corrupti quae esse omnis
+                perspiciatis id reprehenderit enim eos assumenda, error
+                laboriosam voluptates molestiae aspernatur corporis.
+              </p>
+            </div>
+            <div class="col-md-4">
+              <img
+                class="d-block w-100 rounded mb-2"
+                src="images/eventos/casamento.jpg"
+                alt=""
+              />
+              <h3 class="section-title text-coloreds fs-4">
+                <i class="bi bi-arrow-through-heart-fill"></i>
+                Casamento
+              </h3>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi,
+                minima repellendus! Sunt vero harum corrupti quae esse omnis
+                perspiciatis id reprehenderit enim eos assumenda, error
+                laboriosam voluptates molestiae aspernatur corporis.
+              </p>
+            </div>
+            <div class="col-md-4">
+              <img
+                class="d-block w-100 rounded mb-2"
+                src="images/eventos/confraternizacoes.jpg"
+                alt=""
+              />
+              <h3 class="section-title text-coloreds fs-4">
+                <i class="bi bi-people-fill"></i>
+                Confraternizacoes
+              </h3>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi,
+                minima repellendus! Sunt vero harum corrupti quae esse omnis
+                perspiciatis id reprehenderit enim eos assumenda, error
+                laboriosam voluptates molestiae aspernatur corporis.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <script src="lib/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
