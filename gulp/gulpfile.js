@@ -12,7 +12,7 @@ function compressImage() {
     .pipe(gulp.dest("./build/images"));
 }
 
-function jSCompress() {
+function jsCompress() {
   return gulp
     .src("./src/scripts/*.js")
     .pipe(uglify())
@@ -42,7 +42,7 @@ exports.default = function () {
   gulp.watch(
     "./src/scripts/*.js",
     { ignoreInitial: false },
-    gulp.series(jSCompress)
+    gulp.series(jsCompress)
   );
   gulp.watch(
     "./src/images/*",
