@@ -6,6 +6,11 @@
   background-image: url(../images/hero_desktop.jpeg);
   background-size: cover;
 
+  .button {
+    margin-top: 2vw;
+    margin-bottom: 8px;
+  }
+
   text-align: center;
   &__content {
     max-width: 640px;
