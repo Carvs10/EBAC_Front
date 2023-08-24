@@ -575,6 +575,25 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
 
 },{}],"3cYfC":[function(require,module,exports) {
 AOS.init();
+const eventDate = new Date("Dec 12, 2023 19:00:00");
+const eventTimeStamp = eventDate.getTime();
+const countingHours = setInterval(function() {
+    const now = new Date();
+    const currentTimeStamp = now.getTime();
+    const distance = eventTimeStamp - currentTimeStamp;
+    const daysMiliseconds = 86400000;
+    const hoursMiliseconds = 3600000;
+    const minuteMilliseconds = 60000;
+    const daysUntilEvent = Math.floor(distance / daysMiliseconds);
+    const hoursUntilEvent = Math.floor(distance % daysMiliseconds / hoursMiliseconds);
+    const minutesUntilEvent = Math.floor(distance % hoursMiliseconds / minuteMilliseconds);
+    const secondsUntilEvent = Math.floor(distance % minuteMilliseconds / 1000);
+    document.getElementById("contador").innerHTML = `${daysUntilEvent}d ${hoursUntilEvent}h ${minutesUntilEvent}m ${secondsUntilEvent}s`;
+    if (distance < 0) {
+        clearInterval(countingHours);
+        document.getElementById("contador").innerHTML = "Evento expirado";
+    }
+}, 1000);
 
 },{}]},["iIhvB","3cYfC"], "3cYfC", "parcelRequire7531")
 
