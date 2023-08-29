@@ -23,12 +23,12 @@ $(document).ready(() => {
     $(botao).find("span").removeClass("d-none");
 
     // $.ajax(endpoint).done((response) => {
-    // const logradouro = response.logradouro;
-    // const bairro = response.bairro;
-    // const cidade = response.localidade;
-    // const estado = response.uf;
-    // const endereco = `${logradouro}, ${bairro} - ${cidade} - ${estado}`;
-    // $("#endereco").val(endereco);
+    //   const logradouro = response.logradouro;
+    //   const bairro = response.bairro;
+    //   const cidade = response.localidade;
+    //   const estado = response.uf;
+    //   const endereco = `${logradouro}, ${bairro} - ${cidade} - ${estado}`;
+    //   $("#endereco").val(endereco);
 
     //   setTimeout(function () {
     //     $(botao).find("span").addClass("d-none");
@@ -46,11 +46,24 @@ $(document).ready(() => {
         const estado = json.uf;
         const endereco = `${logradouro}, ${bairro} - ${cidade} - ${estado}`;
         $("#endereco").val(endereco);
-
+      })
+      .catch((error) => {
+        alert(
+          "Ocorreu um erro ao buscar o endereço. Tente novamente mais tarde"
+        );
+      })
+      .finally(() => {
         setTimeout(function () {
           $(botao).find("span").addClass("d-none");
           $(botao).find("i").removeClass("d-none");
-        }, 2000);
+        }, 1000);
       });
+  });
+
+  $("#formulario-pedido").submit((event) => {
+    event.preventDefault();
+    if ($("#nome").val().lenght == 0) {
+      throw new Error("Digite o nome, por favor.");
+    }
   });
 });
