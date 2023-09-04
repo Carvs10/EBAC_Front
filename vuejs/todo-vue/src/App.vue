@@ -1,6 +1,10 @@
 <script setup>
 import { reactive } from "vue";
 
+import Header from "./components/Header.vue";
+import Form from "./components/Form.vue";
+import TaskList from "./components/TaskLIst.vue";
+
 const state = reactive({
   filter: "todas",
   tasks: [
@@ -54,55 +58,13 @@ const registerTask = () => {
 
 <template>
   <div class="container">
-    <header class="p-5 mb-4 mt-4 bg-light rounded-3">
-      <h1>Minhas tarefas</h1>
-      <p>Você possui {{ getPendingTasks().length }} tarefas pendentes</p>
-    </header>
-    <form @submit.prevent="registerTask">
-      <div class="row">
-        <div class="col">
-          <input
-            :value="state.newTask"
-            required
-            type="text"
-            placeholder="Digite a descrição da tarefa"
-            class="form-control"
-            @change="(event) => (state.newTask = event.target.value)"
-          />
-        </div>
-        <div class="col-md-2">
-          <button type="submit" class="btn btn-primary">Cadastrar</button>
-        </div>
-      </div>
-      <div class="col-md-2">
-        <select
-          class="form-control"
-          @change="(event) => (state.filter = event.target.value)"
-        >
-          <option value="todas">Todas as tarefas</option>
-          <option value="pendentes">Pendentes</option>
-          <option value="finalizadas">Finalizadas</option>
-        </select>
-      </div>
-    </form>
-    <ul class="list-group mt-4">
-      <li class="list-group-item" v-for="task in filterTasks()">
-        <input
-          type="checkbox"
-          :checked="task.finished"
-          :id="task.title"
-          @change="(event) => (task.finished = event.target.checked)"
-        />
-        <label :for="task.title" class="ms-3" :class="{ done: task.finished }">
-          {{ task.title }}
-        </label>
-      </li>
-    </ul>
+    <Header :pending-tasks="getPendingTasks().length" />
+    <Form
+      :new-task="state.newTask"
+      :edit-new-task="(event) => (state.newTask = event.target.value)"
+      :register-task="registerTask"
+      :change-filter="(event) => (state.filter = event.target.value)"
+    />
+    <TaskList :tasks="filterTasks()" />
   </div>
 </template>
-
-<style scoped>
-.done {
-  text-decoration: line-through;
-}
-</style>
