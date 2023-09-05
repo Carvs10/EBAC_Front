@@ -80,12 +80,11 @@ header {
 }
 
 .container {
-  max-width: 960px;
   padding: 16px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
   background-color: antiquewhite;
 }
 .operation {
