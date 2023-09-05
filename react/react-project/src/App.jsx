@@ -1,15 +1,9 @@
+import Perfil from "./components/Perfil";
+
 function App() {
-  const nome = "joao";
-
-  function retornaNome() {
-    return nome;
-  }
-
   return (
     <>
-      <h1>Teste</h1>
-      <h2>Subtitulo</h2>
-      <h3>Ola, {retornaNome()}</h3>
+      <Perfil nome="Joao Victtor" endereco="https://github.com/Carvs10.png" />
     </>
   );
 }
