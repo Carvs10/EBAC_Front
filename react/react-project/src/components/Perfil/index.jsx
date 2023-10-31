@@ -1,11 +1,16 @@
-import "./perfil.css";
+import styles from "./Perfil.module.css";
 
-const Perfil = ({ nome, endereco }) => {
+// eslint-disable-next-line react/prop-types
+const Perfil = ({ username }) => {
   return (
-    <div>
-      <img className="perfil-avatar" src={endereco} alt="" />
-      <h3 className="perfil-title">{nome}</h3>
-    </div>
+    <header className={styles.header}>
+      <img
+        className={styles.avatar}
+        src={`https://github.com./${username}.png`}
+        alt=""
+      />
+      <h1 className={styles.name}>{username}</h1>
+    </header>
   );
 };
 
