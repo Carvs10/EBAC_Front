@@ -9,7 +9,7 @@ function App() {
 
   return (
     <>
-      <Perfil nome="Joao Victtor" endereco="https://github.com/Carvs10.png" />
+      <Perfil nomeDoUsuário="Carvs10" />
       <ReposList />
 
       {/* {{formIsVisible && <Formulario />}
